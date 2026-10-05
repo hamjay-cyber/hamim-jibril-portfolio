@@ -976,3 +976,115 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Ida PhotoPrint Studio case study */
+.ida-case-study {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 34px;
+  padding: 34px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.ida-case-heading h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  margin: 8px 0 8px;
+}
+
+.ida-case-lead {
+  color: var(--muted);
+  margin-top: 18px;
+  max-width: 620px;
+}
+
+.ida-feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px 18px;
+  margin-top: 24px;
+}
+
+.ida-feature-list span {
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  font-size: .92rem;
+}
+
+.ida-case-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 14px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.ida-case-meta div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ida-case-meta span {
+  color: var(--muted);
+  font-size: .74rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.ida-case-meta strong {
+  font-size: .9rem;
+}
+
+.ida-case-visuals {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.ida-shot {
+  display: block;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.45);
+  overflow: hidden;
+}
+
+.ida-shot img {
+  width: 100%;
+  display: block;
+  transition: transform .35s ease;
+}
+
+.ida-shot:hover img {
+  transform: scale(1.012);
+}
+
+.ida-shot-secondary {
+  width: 78%;
+  margin-left: auto;
+}
+
+@media (max-width: 980px) {
+  .ida-case-study {
+    grid-template-columns: 1fr;
+  }
+
+  .ida-case-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .ida-shot-secondary {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .ida-feature-list {
+    grid-template-columns: 1fr;
+  }
+}
