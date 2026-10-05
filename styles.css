@@ -769,3 +769,96 @@ button:focus-visible {
     transform: none;
   }
 }
+
+
+/* Mobile refinement — keeps the hero balanced and brings the portrait above the fold */
+@media (max-width: 760px) {
+  .hero {
+    padding: 50px 0 58px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .hero-copy {
+    display: contents;
+  }
+
+  .hero-copy.reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .kicker-row {
+    order: 1;
+    margin-bottom: 4px;
+  }
+
+  .hero h1 {
+    order: 2;
+    font-size: clamp(2.55rem, 11.5vw, 4rem);
+    line-height: 0.98;
+  }
+
+  .hero-lead {
+    order: 3;
+    margin-top: 0;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .hero-photo {
+    order: 4;
+    width: 100%;
+    max-width: none;
+    margin-top: 2px;
+  }
+
+  .photo-frame {
+    width: min(82%, 360px);
+    margin: 0 auto;
+    transform: rotate(0.7deg);
+  }
+
+  .photo-caption {
+    width: min(82%, 360px);
+    margin: 12px auto 0;
+  }
+
+  .hero-actions {
+    order: 5;
+    margin-top: 2px;
+    gap: 14px;
+  }
+
+  .hero-actions .btn {
+    min-height: 48px;
+    padding-inline: 20px;
+  }
+
+  .text-action {
+    font-size: 0.98rem;
+  }
+
+  .hero-footnotes {
+    order: 6;
+    margin-top: 10px;
+    padding-top: 20px;
+    gap: 14px;
+  }
+
+  .hero-footnotes div {
+    padding-bottom: 4px;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .contact-links strong {
+    overflow-wrap: anywhere;
+  }
+}
