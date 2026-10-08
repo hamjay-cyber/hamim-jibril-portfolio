@@ -12,22 +12,23 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header" id="top">
   <div class="container nav-wrap">
     <a href="#top" class="brand" aria-label="Hamim Jibril home"><span class="brand-dot"></span><span class="brand-name">Hamim Jibril</span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+    <button class="menu-toggle" id="menuToggle" aria-controls="mainNav" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
     <nav class="nav" id="mainNav">
       <a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact" class="nav-contact">Contact</a>
     </nav>
   </div>
 </header>
-<main>
+<main id="main-content">
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy reveal">
       <div class="kicker-row"><span class="kicker">SOFTWARE DEVELOPER</span><span class="kicker-line"></span><span class="kicker muted">UGANDA</span></div>
       <h1>I build practical digital tools <span>for real-world work.</span></h1>
-      <p class="hero-lead">I’m Hamim Jibril, a Computer Science graduate focused on business software, automation, desktop applications and useful web systems.</p>
+      <p class="hero-lead">I’m Hamim Jibril, a software developer in Uganda. I build inventory systems, Windows applications and automation tools around everyday business needs.</p>
       <div class="hero-actions"><a href="#work" class="btn btn-dark">View selected work</a><a href="mailto:hamimjibson@gmail.com" class="text-action">Email me →</a></div>
       <div class="hero-footnotes">
         <div><span>Education</span><strong>BSc Computer Science</strong></div>
@@ -42,37 +43,15 @@
   </div>
 </section>
 
-<section class="statement reveal">
-  <div class="container statement-inner"><p>I enjoy turning everyday operational problems into <strong>clear, usable and maintainable software.</strong></p></div>
-</section>
-
-<section class="section" id="about">
-  <div class="container split-layout">
-    <div class="section-index reveal"><span>01</span><p>About</p></div>
-    <div class="section-content">
-      <div class="section-title reveal"><h2>A practical approach to technology.</h2></div>
-      <div class="about-columns reveal">
-        <p>My interest in software comes from seeing how much better everyday work becomes when the right tool exists. I like understanding the actual problem first, then building something simple enough to use and flexible enough to improve.</p>
-        <p>I have worked on inventory platforms, desktop applications, chatbots and automation tools. Through Ham Jay Media & Tech, I also work directly with clients, which keeps me close to the kinds of problems businesses face outside the classroom.</p>
-      </div>
-      <div class="about-meta reveal">
-        <div><span>Primary stack</span><strong>Python · Django · PHP · MySQL</strong></div>
-        <div><span>Desktop</span><strong>C# · WPF · .NET</strong></div>
-        <div><span>Other</span><strong>Kotlin · HTML · CSS · JavaScript</strong></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section section-tint" id="work">
   <div class="container split-layout">
-    <div class="section-index reveal"><span>02</span><p>Selected work</p></div>
+    <div class="section-index reveal"><span>01</span><p>Selected work</p></div>
     <div class="section-content">
       <div class="section-title reveal"><h2>Projects that best represent what I build.</h2></div>
       <article class="featured-project reveal">
         <div class="featured-heading">
           <div><span class="project-label">01 · FLAGSHIP</span><h3>NileFlow Inventory Management</h3></div>
-          <span class="project-stack">PHP · MySQL · JavaScript · PWA</span>
+          <span class="project-stack">PHP · MySQL · JavaScript</span>
         </div>
         <p class="featured-copy">A multi-branch inventory and sales management system designed for businesses that need better control over stock, branch activity, purchases, sales and reporting.</p>
         <div class="project-details">
@@ -169,7 +148,7 @@
 
 <section class="section" id="services">
   <div class="container split-layout">
-    <div class="section-index reveal"><span>03</span><p>What I do</p></div>
+    <div class="section-index reveal"><span>02</span><p>What I do</p></div>
     <div class="section-content">
       <div class="section-title reveal"><h2>Useful systems, built around the work they need to support.</h2></div>
       <div class="capabilities-grid">
@@ -177,6 +156,24 @@
         <div class="capability reveal"><span>02</span><h3>Automation</h3><p>Chatbots and workflow tools that reduce repetitive manual work.</p></div>
         <div class="capability reveal"><span>03</span><h3>Desktop software</h3><p>Windows applications designed for focused business or office tasks.</p></div>
         <div class="capability reveal"><span>04</span><h3>Web applications</h3><p>Responsive systems that work cleanly across desktop and mobile.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container split-layout">
+    <div class="section-index reveal"><span>03</span><p>About</p></div>
+    <div class="section-content">
+      <div class="section-title reveal"><h2>A practical approach to technology.</h2></div>
+      <div class="about-columns reveal">
+        <p>My interest in software comes from seeing how much better everyday work becomes when the right tool exists. I like understanding the actual problem first, then building something simple enough to use and flexible enough to improve.</p>
+        <p>I have worked on inventory platforms, desktop applications, chatbots and automation tools. Through Ham Jay Media & Tech, I also work directly with clients, which keeps me close to the kinds of problems businesses face outside the classroom.</p>
+      </div>
+      <div class="about-meta reveal">
+        <div><span>Primary stack</span><strong>Python · Django · PHP · MySQL</strong></div>
+        <div><span>Desktop</span><strong>C# · WPF · .NET</strong></div>
+        <div><span>Other</span><strong>Kotlin · HTML · CSS · JavaScript</strong></div>
       </div>
     </div>
   </div>
