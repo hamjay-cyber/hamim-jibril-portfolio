@@ -601,8 +601,8 @@ a {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(18px);
+  opacity: 1;
+  transform: none;
   transition: opacity .65s ease, transform .65s ease;
 }
 
@@ -1087,4 +1087,22 @@ button:focus-visible {
   .ida-feature-list {
     grid-template-columns: 1fr;
   }
+}
+
+/* Progressive enhancement and accessible section navigation */
+[hidden] { display: none !important; }
+section[id], #main-content { scroll-margin-top: 90px; }
+.motion-enabled .reveal { opacity: 0; transform: translateY(18px); }
+.motion-enabled .reveal.visible { opacity: 1; transform: none; }
+.skip-link { position: fixed; left: 18px; top: 10px; z-index: 100; padding: 12px 18px; background: var(--deep); color: white; transform: translateY(-150%); }
+.skip-link:focus { transform: none; }
+.contact-section a:focus-visible, .footer a:focus-visible { outline: 3px solid #fff; }
+@media (max-width: 760px) {
+  .hero-actions { order: 4; }
+  .hero-photo { order: 5; }
+  .motion-enabled .hero-copy.reveal { opacity: 1; transform: none; }
+  .hero { padding-top: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-enabled .reveal { opacity: 1; transform: none; }
 }
