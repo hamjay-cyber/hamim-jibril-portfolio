@@ -16,7 +16,8 @@ mainNav?.querySelectorAll("a").forEach(link => {
   });
 });
 
-if ("IntersectionObserver" in window) {
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.documentElement.classList.add("motion-enabled");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -30,3 +31,18 @@ if ("IntersectionObserver" in window) {
 } else {
   document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
 }
+
+function closeMenu(returnFocus = false) {
+  mainNav?.classList.remove("open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+  if (returnFocus) menuToggle?.focus();
+}
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && mainNav?.classList.contains("open")) closeMenu(true);
+});
+document.addEventListener("click", event => {
+  if (mainNav?.classList.contains("open") && !mainNav.contains(event.target) && !menuToggle?.contains(event.target)) closeMenu();
+});
+window.matchMedia("(min-width: 761px)").addEventListener("change", event => {
+  if (event.matches) closeMenu();
+});
