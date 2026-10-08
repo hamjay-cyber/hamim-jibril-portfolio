@@ -1106,3 +1106,8 @@ section[id], #main-content { scroll-margin-top: 90px; }
 @media (prefers-reduced-motion: reduce) {
   .motion-enabled .reveal { opacity: 1; transform: none; }
 }
+
+
+/* Preserve intrinsic image proportions when dimensions reserve loading space. */
+.nileflow-shot img, .ida-shot img { height: auto; }
+.photo-frame img { height: auto; aspect-ratio: 4 / 5; }
